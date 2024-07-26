@@ -1,7 +1,7 @@
 const AppLogo = () => {
    return (
       <svg
-         width="121"
+         width="118"
          height="75"
          viewBox="0 0 121 75"
          fill="none"
