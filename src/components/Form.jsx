@@ -54,7 +54,6 @@ const FormButtonContainer = styled(Box)(({ theme }) => ({
 const TextContainer = styled(Box)(({ theme }) => ({
    flex: 1,
    width: "100%",
-   paddingLeft: "32px",
    textAlign: "center",
    [theme.breakpoints.down("md")]: {
       paddingLeft: 0,
