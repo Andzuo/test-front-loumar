@@ -30,8 +30,9 @@ const FormFieldContainer = styled(Box)(({ theme }) => ({
 }));
 
 const CustomLabel = styled(Typography)(({ theme }) => ({
-   fontWeight: "bold",
+   fontWeight: "semibold",
    marginBottom: "8px",
+   color: "#344054",
 }));
 
 const FormButtonContainer = styled(Box)(({ theme }) => ({
@@ -101,7 +102,7 @@ const Form = () => {
             </Typography>
          </TextContainer>
          <FormFieldContainer>
-            <CustomLabel>Primeiro Nome</CustomLabel>
+            <CustomLabel variant="body1">Primeiro Nome</CustomLabel>
             <TextField
                value={formData.firstName}
                onChange={handleChange}
@@ -139,6 +140,11 @@ const Form = () => {
                variant="contained"
                color="tertiary"
                type="submit"
+               sx={{
+                  textTransform: "none",
+                  fontWeight: "bold",
+                  fontSize: "16px",
+               }}
             >
                Enviar mensagem
             </Button>

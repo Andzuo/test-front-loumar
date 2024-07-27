@@ -3,6 +3,7 @@ import {
    AppBar,
    Button,
    IconButton,
+   Link,
    Menu,
    MenuItem,
    styled,
@@ -36,6 +37,10 @@ const StyledTabs = styled(Tabs)(({ theme }) => ({
          borderBottom: "2px solid #fff",
       },
    },
+}));
+const StyledLink = styled(Link)(({ theme }) => ({
+   textDecoration: "none",
+   color: "inherit",
 }));
 
 const NavBar = () => {
@@ -76,14 +81,22 @@ const NavBar = () => {
                <Tab label="FAQ" />
                <Tab label="CONTATO" />
             </StyledTabs>
-            <Button
-               startIcon={<WhatsAppIcon />}
-               variant="contained"
-               color="whatsappButton2"
-               sx={{ display: { xs: "none", md: "flex" } }}
+            <StyledLink
+               href="https://wa.me/5545988041417?text=Oi%20mensagem%0A"
+               target="_blank"
+               rel="noopener noreferrer"
             >
-               Entrar em contato
-            </Button>
+               <Button
+                  startIcon={<WhatsAppIcon />}
+                  variant="contained"
+                  color="whatsappButton2"
+                  sx={{
+                     display: { xs: "none", md: "flex", textTransform: "none" },
+                  }}
+               >
+                  Entrar em contato
+               </Button>
+            </StyledLink>
             <IconButton
                edge="start"
                color="inherit"
@@ -103,13 +116,19 @@ const NavBar = () => {
                <MenuItem onClick={handleMenuClose}>FAQ</MenuItem>
                <MenuItem onClick={handleMenuClose}>CONTATO</MenuItem>
                <MenuItem onClick={handleMenuClose}>
-                  <Button
-                     startIcon={<WhatsAppIcon />}
-                     variant="contained"
-                     color="whatsappButton2"
+                  <StyledLink
+                     href="https://wa.me/5545988041417?text=Oi%20mensagem%0A"
+                     target="_blank"
+                     rel="noopener noreferrer"
                   >
-                     Entrar em contato
-                  </Button>
+                     <Button
+                        startIcon={<WhatsAppIcon />}
+                        variant="contained"
+                        color="whatsappButton2"
+                     >
+                        Entrar em contato
+                     </Button>
+                  </StyledLink>
                </MenuItem>
             </Menu>
          </Toolbar>

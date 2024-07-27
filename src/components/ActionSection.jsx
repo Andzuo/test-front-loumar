@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import React from "react";
 
@@ -29,6 +29,11 @@ const BoxContent = styled(Box)(({ theme }) => ({
    borderRadius: "16px",
 }));
 
+const StyledLink = styled(Link)(({ theme }) => ({
+   textDecoration: "none",
+   color: "inherit",
+}));
+
 const ActionPage = () => {
    return (
       <SectionContainer>
@@ -44,14 +49,20 @@ const ActionPage = () => {
                Entre em contato direto com nossos atendentes.
             </Typography>
 
-            <Button
-               startIcon={<WhatsAppIcon />}
-               variant="contained"
-               color="whatsappButton1"
-               sx={{ color: "#fff" }}
+            <StyledLink
+               href="https://wa.me/5545988041417?text=Oi%20mensagem%0A"
+               target="_blank"
+               rel="noopener noreferrer"
             >
-               Entrar em contato
-            </Button>
+               <Button
+                  startIcon={<WhatsAppIcon />}
+                  variant="contained"
+                  color="whatsappButton1"
+                  sx={{ color: "#fff", textTransform: "none" }}
+               >
+                  Entrar em contato
+               </Button>
+            </StyledLink>
          </BoxContent>
       </SectionContainer>
    );
