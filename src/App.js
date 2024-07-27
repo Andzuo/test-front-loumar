@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import FirstSection from "./components/FirstSection";
 import FaqSection from "./components/FaqSection";
 import ActionPage from "./components/ActionSection";
+import Form from "./components/Form";
 
 const App = () => {
    return (
@@ -13,6 +14,7 @@ const App = () => {
          <FirstSection />
          <FaqSection />
          <ActionPage />
+         <Form />
       </div>
    );
 };
