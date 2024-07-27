@@ -5,7 +5,7 @@ import React from "react";
 
 const SectionContainer = styled(Box)(({ theme }) => ({
    display: "flex",
-   flexDirection: "row",
+   flexDirection: "collumn",
    alignItems: "center",
    justifyContent: "center",
    textAlign: "center",
