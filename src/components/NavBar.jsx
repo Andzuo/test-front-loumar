@@ -63,7 +63,6 @@ const NavBar = () => {
                display: "flex",
                justifyContent: "space-between",
                alignItems: "center",
-               paddingX: { xs: "16px", sm: "24px", md: "32px", lg: "352px" },
             }}
          >
             <div
