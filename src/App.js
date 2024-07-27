@@ -5,6 +5,7 @@ import FirstSection from "./components/FirstSection";
 import FaqSection from "./components/FaqSection";
 import ActionPage from "./components/ActionSection";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 const App = () => {
    return (
@@ -15,6 +16,7 @@ const App = () => {
          <FaqSection />
          <ActionPage />
          <Form />
+         <Footer />
       </div>
    );
 };
