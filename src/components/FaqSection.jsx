@@ -12,15 +12,15 @@ import PizzaImage from "../assets/Icon2.png";
 
 const FAQContainer = styled(Box)(({ theme }) => ({
    display: "flex",
-   flexDirection: "row",
+   flexDirection: "row-reverse",
    alignItems: "center",
    justifyContent: "space-between",
    maxWidth: "80%",
-   padding: "5%",
+   padding: "72px 128px 72px 128px",
    width: "100%",
    margin: "0 auto",
-   boxSizing: "border-box",
-   [theme.breakpoints.down("lg")]: {
+   gap: "20px",
+   [theme.breakpoints.down("xl")]: {
       flexDirection: "column",
       padding: "16px",
    },
@@ -39,7 +39,7 @@ const ImageContainer = styled("div")(({ theme }) => ({
       objectFit: "cover",
    },
    [theme.breakpoints.down("lg")]: {
-      width: "100%",
+      width: "75%",
       maxWidth: "100%",
       marginTop: "16px",
    },
@@ -53,7 +53,7 @@ const TextContainer = styled(Box)(({ theme }) => ({
       paddingLeft: 0,
       display: "flex",
       flexDirection: "column",
-      marginTop: "16px",
+      marginTop: "20px",
       textAlign: "center",
       alignItems: "center",
       justifyContent: "center",
@@ -75,6 +75,9 @@ const CustomAccordion = styled(Accordion)(({ theme }) => ({
 const FaqSection = () => {
    return (
       <FAQContainer>
+         <ImageContainer>
+            <img src={PizzaImage} alt="Pizza" />
+         </ImageContainer>
          <TextContainer>
             <Typography color="primary">FAQ</Typography>
             <Typography variant="h4" component="h2" gutterBottom>
@@ -174,9 +177,6 @@ const FaqSection = () => {
                </CustomAccordion>
             </AccordionContainer>
          </TextContainer>
-         <ImageContainer>
-            <img src={PizzaImage} alt="Pizza" />
-         </ImageContainer>
       </FAQContainer>
    );
 };

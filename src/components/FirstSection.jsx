@@ -10,16 +10,16 @@ const SectionContainer = styled(Box)(({ theme }) => ({
    flexDirection: "row",
    alignItems: "center",
    justifyContent: "center",
-   padding: "5%",
+   padding: "48px 352px 72px 352px",
    width: "100%",
    margin: "0 auto",
-   [theme.breakpoints.down("lg")]: {
+   [theme.breakpoints.down("xl")]: {
       flexDirection: "column",
       padding: "16px",
    },
 }));
 
-const ImageContainer = styled("div")({
+const ImageContainer = styled("div")(({ theme }) => ({
    width: "100%",
    maxWidth: "592px",
    height: "auto",
@@ -31,13 +31,17 @@ const ImageContainer = styled("div")({
       height: "100%",
       objectFit: "cover",
    },
-});
+   [theme.breakpoints.down("lg")]: {
+      width: "75%",
+      maxWidth: "100%",
+      marginTop: "16px",
+   },
+}));
 
 const TextContainer = styled(Box)(({ theme }) => ({
    marginLeft: "32px",
    flex: 1,
-   maxWidth: "700px",
-   [theme.breakpoints.down("md")]: {
+   [theme.breakpoints.down("lg")]: {
       marginLeft: 0,
       display: "flex",
       flexDirection: "column",
@@ -59,12 +63,13 @@ const IconWrapper = styled(Box)(({ theme }) => ({
    marginTop: "8px",
    display: "flex",
    border: "1px solid #fff",
-   boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.25)",
+   boxShadow: "2px 4px 8px rgba(0, 0, 0, 0.1)",
    borderRadius: "20%",
    flexDirection: "column",
    alignItems: "center",
    justifyContent: "center",
    width: "48px",
+   minWidth: "48px",
    height: "48px",
 }));
 
