@@ -9,8 +9,8 @@ const SectionContainer = styled(Box)(({ theme }) => ({
    alignItems: "center",
    justifyContent: "center",
    textAlign: "center",
-   padding: "87px 352px 72px 352px",
-   width: "100%",
+   padding: "40px 352px",
+   width: "95%",
    margin: "0 auto",
    [theme.breakpoints.down("xl")]: {
       flexDirection: "column",
@@ -21,7 +21,7 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 const BoxContent = styled(Box)(({ theme }) => ({
    display: "flex",
    width: "100%",
-   padding: "48px 32px",
+   padding: "30px",
    flexDirection: "column",
    alignItems: "center",
    justifyContent: "center",
@@ -48,7 +48,7 @@ const ActionPage = () => {
                startIcon={<WhatsAppIcon />}
                variant="contained"
                color="whatsappButton1"
-               sx={{ color: "#fff", marginY: "30px" }}
+               sx={{ color: "#fff" }}
             >
                Entrar em contato
             </Button>
