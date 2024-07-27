@@ -8,6 +8,9 @@ export const theme = createTheme({
       secondary: {
          main: "#475467",
       },
+      tertiary: {
+         main: "#FF5000",
+      },
       whatsappButton1: {
          main: "#25D366",
       },
