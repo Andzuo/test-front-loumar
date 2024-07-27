@@ -10,7 +10,7 @@ const SectionContainer = styled(Box)(({ theme }) => ({
    flexDirection: "row",
    alignItems: "center",
    justifyContent: "center",
-   padding: "32px",
+   padding: "5%",
    width: "100%",
    margin: "0 auto",
    [theme.breakpoints.down("lg")]: {
@@ -36,6 +36,7 @@ const ImageContainer = styled("div")({
 const TextContainer = styled(Box)(({ theme }) => ({
    marginLeft: "32px",
    flex: 1,
+   maxWidth: "700px",
    [theme.breakpoints.down("md")]: {
       marginLeft: 0,
       display: "flex",
