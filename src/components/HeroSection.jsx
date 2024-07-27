@@ -3,7 +3,7 @@ import Banner from "../assets/Banner.png";
 
 const HeroSection = () => {
    return (
-      <div style={{ margin: 0 }}>
+      <div>
          <img src={Banner} alt="banner" />
       </div>
    );
