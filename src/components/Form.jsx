@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, TextField, Typography, Button, styled } from "@mui/material";
 import SendIcon from "./icons/SendIcon";
 
@@ -67,8 +67,28 @@ const TextContainer = styled(Box)(({ theme }) => ({
 }));
 
 const Form = () => {
+   const [formData, setFormData] = useState({
+      firstName: "",
+      email: "",
+      message: "",
+   });
+
+   const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+         ...formData,
+         [name]: value,
+      });
+   };
+
+   const handleSubmit = (e) => {
+      e.preventDefault();
+      alert(
+         `Muito Obrigado! Em breve nossa equipe irá entrar em contato\n\nNome: ${formData.firstName}\nEmail: ${formData.email}\nMensagem: ${formData.message}`
+      );
+   };
    return (
-      <FormContainer component="form">
+      <FormContainer component="form" onSubmit={handleSubmit}>
          <TextContainer>
             <Typography color="primary">Entre em Contato</Typography>
             <Typography variant="h4" component="h2" gutterBottom>
@@ -82,15 +102,30 @@ const Form = () => {
          </TextContainer>
          <FormFieldContainer>
             <CustomLabel>Primeiro Nome</CustomLabel>
-            <TextField variant="outlined" name="firstName" required />
+            <TextField
+               value={formData.firstName}
+               onChange={handleChange}
+               variant="outlined"
+               name="firstName"
+               required
+            />
          </FormFieldContainer>
          <FormFieldContainer>
             <CustomLabel>Email</CustomLabel>
-            <TextField variant="outlined" name="email" type="email" required />
+            <TextField
+               value={formData.email}
+               onChange={handleChange}
+               variant="outlined"
+               name="email"
+               type="email"
+               required
+            />
          </FormFieldContainer>
          <FormFieldContainer>
             <CustomLabel>Mensagem</CustomLabel>
             <TextField
+               value={formData.message}
+               onChange={handleChange}
                variant="outlined"
                name="message"
                multiline
@@ -103,6 +138,7 @@ const Form = () => {
                startIcon={<SendIcon />}
                variant="contained"
                color="tertiary"
+               type="submit"
             >
                Enviar mensagem
             </Button>
