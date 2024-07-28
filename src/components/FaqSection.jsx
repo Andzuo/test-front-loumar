@@ -15,10 +15,11 @@ const FAQContainer = styled(Box)(({ theme }) => ({
    flexDirection: "row-reverse",
    alignItems: "center",
    justifyContent: "center",
-   maxWidth: "80%",
+   maxWidth: "100%",
    width: "100%",
    margin: "0 auto",
    gap: "1.25rem",
+   padding: "0 0 4rem 0",
    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       padding: "1rem",
@@ -69,14 +70,12 @@ const TextContainer = styled(Box)(({ theme }) => ({
 const AccordionContainer = styled(Box)(({ theme }) => ({
    width: "100%",
    marginTop: "1rem",
-   [theme.breakpoints.down("lg")]: {
-      maxWidth: "100%",
-   },
+   textAlign: "start",
 }));
 
 const CustomAccordion = styled(Accordion)(({ theme }) => ({
-   borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-   padding: "1rem",
+   borderBottom: "1px solid #f2f2f2",
+   boxShadow: "none",
 }));
 
 const FaqSection = () => {
