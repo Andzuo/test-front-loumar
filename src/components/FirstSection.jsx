@@ -9,11 +9,12 @@ const SectionContainer = styled(Box)(({ theme }) => ({
    display: "flex",
    flexDirection: "row",
    alignItems: "center",
-   justifyContent: "center",
-   padding: "4.5rem 22rem",
+   justifyContent: "space-between",
+   padding: "4rem",
    width: "100%",
+   maxWidth: "80rem",
    margin: "0 auto",
-   [theme.breakpoints.down("xl")]: {
+   [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       padding: "1rem",
    },
@@ -31,8 +32,8 @@ const ImageContainer = styled("div")(({ theme }) => ({
       height: "100%",
       objectFit: "cover",
    },
-   [theme.breakpoints.down("lg")]: {
-      width: "75%",
+   [theme.breakpoints.down("xs")]: {
+      width: "100%",
       maxWidth: "100%",
       marginTop: "1rem",
    },
@@ -41,7 +42,7 @@ const ImageContainer = styled("div")(({ theme }) => ({
 const TextContainer = styled(Box)(({ theme }) => ({
    marginLeft: "2rem",
    flex: 1,
-   [theme.breakpoints.down("lg")]: {
+   [theme.breakpoints.down("sm")]: {
       marginLeft: 0,
       display: "flex",
       flexDirection: "column",

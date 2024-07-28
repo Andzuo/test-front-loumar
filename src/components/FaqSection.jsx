@@ -14,7 +14,7 @@ const FAQContainer = styled(Box)(({ theme }) => ({
    display: "flex",
    flexDirection: "row-reverse",
    alignItems: "center",
-   justifyContent: "space-between",
+   justifyContent: "center", // Ajustado para centralizar os itens
    maxWidth: "80%",
    padding: "4.5rem 8rem",
    width: "100%",
@@ -38,8 +38,8 @@ const ImageContainer = styled("div")(({ theme }) => ({
       height: "100%",
       objectFit: "cover",
    },
-   [theme.breakpoints.down("lg")]: {
-      width: "75%",
+   [theme.breakpoints.down("xs")]: {
+      width: "100%",
       maxWidth: "100%",
       marginTop: "1rem",
    },
