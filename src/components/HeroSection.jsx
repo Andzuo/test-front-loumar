@@ -14,6 +14,7 @@ const ImageContainer = styled("div")(({ theme }) => ({
       width: "100%",
       height: "100%",
       objectFit: "cover",
+      transition: "opacity 0.3s ease-in-out",
    },
 }));
 
