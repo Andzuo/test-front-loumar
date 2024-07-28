@@ -5,18 +5,18 @@ import AppLogo from "./icons/appLogo";
 const FooterContainer = styled(Box)(({ theme }) => ({
    flex: 1,
    width: "100%",
-   height: "298.47px",
-   padding: "64px 0 48px 0",
+   height: "18.653125rem",
+   padding: "4rem 0",
    display: "flex",
    flexDirection: "column",
    alignItems: "center",
    justifyContent: "center",
-   gap: "32px",
+   gap: "2rem",
    boxSizing: "border-box",
    backgroundColor: theme.palette.primary.main,
    [theme.breakpoints.down("lg")]: {
       width: "100%",
-      padding: "32px 16px",
+      padding: "2rem 1rem",
    },
 }));
 
@@ -27,21 +27,22 @@ const TextContainer = styled(Box)(({ theme }) => ({
    alignItems: "center",
    justifyContent: "center",
    textAlign: "center",
-   gap: "16px",
+   gap: "1rem",
    "& p": {
-      fontSize: "16px",
+      fontSize: "1rem",
       color: "#fff",
    },
 }));
+
 const Footer = () => {
    return (
       <FooterContainer>
          <AppLogo />
          <TextContainer>
-            <Typography variant="p" component="p" color="textSecondary">
+            <Typography variant="body1" component="p" color="textSecondary">
                Endereço
             </Typography>
-            <Typography variant="p" component="p" color="textSecondary">
+            <Typography variant="body1" component="p" color="textSecondary">
                Av. Brasil, 74 - Foz do Iguaçu - CEP 85851-000
             </Typography>
          </TextContainer>
