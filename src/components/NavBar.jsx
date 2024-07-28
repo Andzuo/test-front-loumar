@@ -24,6 +24,32 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
    justifyContent: "center",
 }));
 
+const StyledToolBar = styled(Toolbar)(({ theme }) => ({
+   display: "flex",
+   justifyContent: "space-between",
+   alignItems: "center",
+   width: "100%",
+   [theme.breakpoints.down("md")]: {
+      width: "100%",
+      height: "100%",
+      flexDirection: "row",
+      justifyContent: "center",
+   },
+}));
+
+const CustomBoxLogo = styled(Box)(({ theme }) => ({
+   display: "flex",
+   alignItems: "center",
+   justifyContent: "center",
+   maxWidth: "12.5rem",
+   width: { xs: "6.25rem", sm: "9.375rem", md: "12.5rem" },
+   [theme.breakpoints.down("md")]: {
+      position: "absolute",
+      left: "50%",
+      transform: "translateX(-50%)",
+   },
+}));
+
 const StyledTabs = styled(Tabs)(({ theme }) => ({
    "& .MuiTabs-flexContainer": {
       justifyContent: "space-between",
@@ -38,6 +64,7 @@ const StyledTabs = styled(Tabs)(({ theme }) => ({
          borderBottom: "0.125rem solid #fff",
       },
    },
+   display: { xs: "none", md: "flex" },
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -60,23 +87,23 @@ const NavBar = () => {
 
    return (
       <StyledAppBar>
-         <Toolbar
-            sx={{
-               display: "flex",
-               justifyContent: "space-between",
-               alignItems: "center",
-            }}
-         >
-            <Box
-               style={{
-                  display: "flex",
-                  alignItems: "center",
-                  maxWidth: "12.5rem",
-                  width: { xs: "6.25rem", sm: "9.375rem", md: "12.5rem" },
+         <StyledToolBar>
+            <IconButton
+               edge="start"
+               color="inherit"
+               aria-label="menu"
+               onClick={handleMenuOpen}
+               sx={{
+                  display: { xs: "flex", md: "none" },
+                  position: "absolute",
+                  left: "1rem",
                }}
             >
+               <MenuIcon sx={{ color: "#fff" }} />
+            </IconButton>
+            <CustomBoxLogo>
                <AppLogo />
-            </Box>
+            </CustomBoxLogo>
             <StyledTabs sx={{ display: { xs: "none", md: "flex" } }}>
                <Tab label="BLOCO 1" />
                <Tab label="FAQ" />
@@ -86,27 +113,17 @@ const NavBar = () => {
                href="https://wa.me/5545988041417?text=Oi%20mensagem%0A"
                target="_blank"
                rel="noopener noreferrer"
+               sx={{ display: { xs: "none", md: "flex" } }}
             >
                <Button
                   startIcon={<WhatsAppIcon />}
                   variant="contained"
                   color="whatsappButton2"
-                  sx={{
-                     display: { xs: "none", md: "flex", textTransform: "none" },
-                  }}
+                  sx={{ textTransform: "none" }}
                >
                   Entrar em contato
                </Button>
             </StyledLink>
-            <IconButton
-               edge="start"
-               color="inherit"
-               aria-label="menu"
-               onClick={handleMenuOpen}
-               sx={{ display: { xs: "flex", md: "none" } }}
-            >
-               <MenuIcon />
-            </IconButton>
             <Menu
                anchorEl={anchorEl}
                open={isMenuOpen}
@@ -132,7 +149,7 @@ const NavBar = () => {
                   </StyledLink>
                </MenuItem>
             </Menu>
-         </Toolbar>
+         </StyledToolBar>
       </StyledAppBar>
    );
 };
