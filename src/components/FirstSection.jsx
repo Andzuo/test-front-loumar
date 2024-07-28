@@ -80,7 +80,7 @@ const IconWrapper = styled(Box)(({ theme }) => ({
 
 const Section = () => {
    return (
-      <SectionContainer>
+      <SectionContainer id="bloco1">
          <ImageContainer>
             <img src={Pizza1} alt="Pizza Suculenta" />
          </ImageContainer>

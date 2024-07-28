@@ -80,7 +80,7 @@ const CustomAccordion = styled(Accordion)(({ theme }) => ({
 
 const FaqSection = () => {
    return (
-      <FAQContainer>
+      <FAQContainer id="faq">
          <ImageContainer>
             <img src={PizzaImage} alt="Pizza" />
          </ImageContainer>

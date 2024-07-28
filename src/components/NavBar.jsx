@@ -105,9 +105,9 @@ const NavBar = () => {
                <AppLogo />
             </CustomBoxLogo>
             <StyledTabs sx={{ display: { xs: "none", md: "flex" } }}>
-               <Tab label="BLOCO 1" />
-               <Tab label="FAQ" />
-               <Tab label="CONTATO" />
+               <Tab label="BLOCO 1" href="#bloco1" />
+               <Tab label="FAQ" href="#faq" />
+               <Tab label="CONTATO" href="#form" />
             </StyledTabs>
             <StyledLink
                href="https://wa.me/5545988041417?text=Oi%20mensagem%0A"

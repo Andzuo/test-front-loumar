@@ -96,7 +96,7 @@ const Form = () => {
       );
    };
    return (
-      <FormContainer component="form" onSubmit={handleSubmit}>
+      <FormContainer id="form" component="form" onSubmit={handleSubmit}>
          <TextContainer>
             <Typography component="h4" color="primary">
                Entre em Contato
