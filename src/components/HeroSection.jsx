@@ -1,25 +1,22 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Paper } from "@mui/material";
 import Banner from "../assets/Banner.png";
 
 const HeroSection = () => {
    return (
-      <Box
+      <Paper
          sx={{
+            display: "flex",
             width: "100%",
+            height: "26.5625rem", // 425px convertidos para rem
             justifyContent: "center",
             overflow: "hidden",
+            backgroundImage: `url(${Banner})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
          }}
-      >
-         <Box
-            component="img"
-            src={Banner}
-            alt="banner"
-            sx={{
-               width: "100%",
-            }}
-         />
-      </Box>
+      ></Paper>
    );
 };
 
