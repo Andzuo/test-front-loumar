@@ -51,6 +51,10 @@ const TextContainer = styled(Box)(({ theme }) => ({
       alignItems: "center",
       justifyContent: "center",
    },
+   "& h4": {
+      fontsize: "0.875rem",
+      color: theme.palette.tertiary.main,
+   },
 }));
 
 const ListItem = styled(Box)({
@@ -81,7 +85,9 @@ const Section = () => {
             <img src={Pizza1} alt="Pizza Suculenta" />
          </ImageContainer>
          <TextContainer>
-            <Typography color="primary">Por que escolher Pizza SVG</Typography>
+            <Typography component="h4" color="primary">
+               Por que escolher Pizza SVG
+            </Typography>
             <Typography variant="h4" component="h2" gutterBottom>
                A melhor Pizza com o melhor
                <br />

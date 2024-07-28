@@ -36,7 +36,7 @@ const FormFieldContainer = styled(Box)(({ theme }) => ({
 const CustomLabel = styled(Typography)(({ theme }) => ({
    fontWeight: "semibold",
    marginBottom: "0.5rem",
-   color: "#344054",
+   outline: "none",
 }));
 
 const FormButtonContainer = styled(Box)(({ theme }) => ({
@@ -68,6 +68,10 @@ const TextContainer = styled(Box)(({ theme }) => ({
       alignItems: "center",
       justifyContent: "center",
    },
+   "& h4": {
+      fontsize: "2.5rem",
+      color: theme.palette.tertiary.main,
+   },
 }));
 
 const Form = () => {
@@ -94,7 +98,9 @@ const Form = () => {
    return (
       <FormContainer component="form" onSubmit={handleSubmit}>
          <TextContainer>
-            <Typography color="primary">Entre em Contato</Typography>
+            <Typography component="h4" color="primary">
+               Entre em Contato
+            </Typography>
             <Typography variant="h4" component="h2" gutterBottom>
                Fale com a nossa equipe especializada e adquira nossos serviços
             </Typography>
@@ -145,11 +151,10 @@ const Form = () => {
                type="submit"
                sx={{
                   textTransform: "none",
-                  fontWeight: "bold",
                   fontSize: "1rem",
                }}
             >
-               Enviar mensagem
+               Enviar Informações
             </Button>
          </FormButtonContainer>
       </FormContainer>

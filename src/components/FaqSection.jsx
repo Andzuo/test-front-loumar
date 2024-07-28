@@ -14,13 +14,12 @@ const FAQContainer = styled(Box)(({ theme }) => ({
    display: "flex",
    flexDirection: "row-reverse",
    alignItems: "center",
-   justifyContent: "center", // Ajustado para centralizar os itens
+   justifyContent: "center",
    maxWidth: "80%",
-   padding: "4.5rem 8rem",
    width: "100%",
    margin: "0 auto",
    gap: "1.25rem",
-   [theme.breakpoints.down("xl")]: {
+   [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       padding: "1rem",
    },
@@ -58,6 +57,13 @@ const TextContainer = styled(Box)(({ theme }) => ({
       alignItems: "center",
       justifyContent: "center",
    },
+   "& h4": {
+      fontsize: "2.5rem",
+      color: theme.palette.tertiary.main,
+   },
+   "& strong": {
+      color: theme.palette.tertiary.main,
+   },
 }));
 
 const AccordionContainer = styled(Box)(({ theme }) => ({
@@ -80,7 +86,9 @@ const FaqSection = () => {
             <img src={PizzaImage} alt="Pizza" />
          </ImageContainer>
          <TextContainer>
-            <Typography color="primary">FAQ</Typography>
+            <Typography component="h4" color="primary">
+               FAQ
+            </Typography>
             <Typography variant="h4" component="h2" gutterBottom>
                Tire todas as suas dúvidas sobre nosso
                <br />
