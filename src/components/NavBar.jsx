@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
    AppBar,
+   Box,
    Button,
    IconButton,
    Link,
@@ -18,7 +19,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
    backgroundColor: theme.palette.primary.main,
    color: theme.palette.primary.contrastText,
-   height: 130,
+   height: "8.125rem",
    display: "flex",
    justifyContent: "center",
 }));
@@ -29,15 +30,16 @@ const StyledTabs = styled(Tabs)(({ theme }) => ({
    },
    "& .MuiTab-root": {
       color: "#fff",
-      fontSize: "14px",
+      fontSize: "0.875rem",
       position: "relative",
       "&:hover": {
          bottom: 0,
          left: 0,
-         borderBottom: "2px solid #fff",
+         borderBottom: "0.125rem solid #fff",
       },
    },
 }));
+
 const StyledLink = styled(Link)(({ theme }) => ({
    textDecoration: "none",
    color: "inherit",
@@ -65,16 +67,16 @@ const NavBar = () => {
                alignItems: "center",
             }}
          >
-            <div
+            <Box
                style={{
                   display: "flex",
                   alignItems: "center",
-                  maxWidth: "200px",
-                  width: { xs: "100px", sm: "150px", md: "200px" },
+                  maxWidth: "12.5rem",
+                  width: { xs: "6.25rem", sm: "9.375rem", md: "12.5rem" },
                }}
             >
                <AppLogo />
-            </div>
+            </Box>
             <StyledTabs sx={{ display: { xs: "none", md: "flex" } }}>
                <Tab label="BLOCO 1" />
                <Tab label="FAQ" />

@@ -16,21 +16,21 @@ const FAQContainer = styled(Box)(({ theme }) => ({
    alignItems: "center",
    justifyContent: "space-between",
    maxWidth: "80%",
-   padding: "72px 128px 72px 128px",
+   padding: "4.5rem 8rem",
    width: "100%",
    margin: "0 auto",
-   gap: "20px",
+   gap: "1.25rem",
    [theme.breakpoints.down("xl")]: {
       flexDirection: "column",
-      padding: "16px",
+      padding: "1rem",
    },
 }));
 
 const ImageContainer = styled("div")(({ theme }) => ({
    width: "100%",
-   maxWidth: "592px",
+   maxWidth: "37rem",
    height: "auto",
-   borderRadius: "16px",
+   borderRadius: "1rem",
    overflow: "hidden",
    transition: "opacity 0.3s ease-in-out",
    "& img": {
@@ -41,19 +41,19 @@ const ImageContainer = styled("div")(({ theme }) => ({
    [theme.breakpoints.down("lg")]: {
       width: "75%",
       maxWidth: "100%",
-      marginTop: "16px",
+      marginTop: "1rem",
    },
 }));
 
 const TextContainer = styled(Box)(({ theme }) => ({
    flex: 1,
-   maxWidth: "700px",
-   paddingLeft: "32px",
+   maxWidth: "43.75rem",
+   paddingLeft: "2rem",
    [theme.breakpoints.down("md")]: {
       paddingLeft: 0,
       display: "flex",
       flexDirection: "column",
-      marginTop: "20px",
+      marginTop: "1.25rem",
       textAlign: "center",
       alignItems: "center",
       justifyContent: "center",
@@ -62,14 +62,15 @@ const TextContainer = styled(Box)(({ theme }) => ({
 
 const AccordionContainer = styled(Box)(({ theme }) => ({
    width: "100%",
-   marginTop: "16px",
+   marginTop: "1rem",
    [theme.breakpoints.down("lg")]: {
       maxWidth: "100%",
    },
 }));
+
 const CustomAccordion = styled(Accordion)(({ theme }) => ({
    borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-   padding: "16px",
+   padding: "1rem",
 }));
 
 const FaqSection = () => {

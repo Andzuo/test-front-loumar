@@ -10,20 +10,20 @@ const SectionContainer = styled(Box)(({ theme }) => ({
    flexDirection: "row",
    alignItems: "center",
    justifyContent: "center",
-   padding: "48px 352px 72px 352px",
+   padding: "4.5rem 22rem",
    width: "100%",
    margin: "0 auto",
    [theme.breakpoints.down("xl")]: {
       flexDirection: "column",
-      padding: "16px",
+      padding: "1rem",
    },
 }));
 
 const ImageContainer = styled("div")(({ theme }) => ({
    width: "100%",
-   maxWidth: "592px",
+   maxWidth: "37rem",
    height: "auto",
-   borderRadius: "16px",
+   borderRadius: "1rem",
    overflow: "hidden",
    transition: "opacity 0.3s ease-in-out",
    "& img": {
@@ -34,18 +34,18 @@ const ImageContainer = styled("div")(({ theme }) => ({
    [theme.breakpoints.down("lg")]: {
       width: "75%",
       maxWidth: "100%",
-      marginTop: "16px",
+      marginTop: "1rem",
    },
 }));
 
 const TextContainer = styled(Box)(({ theme }) => ({
-   marginLeft: "32px",
+   marginLeft: "2rem",
    flex: 1,
    [theme.breakpoints.down("lg")]: {
       marginLeft: 0,
       display: "flex",
       flexDirection: "column",
-      marginTop: "28px",
+      marginTop: "1.75rem",
       textAlign: "start",
       alignItems: "center",
       justifyContent: "center",
@@ -55,22 +55,22 @@ const TextContainer = styled(Box)(({ theme }) => ({
 const ListItem = styled(Box)({
    display: "flex",
    alignItems: "flex-start",
-   marginBottom: "16px",
+   marginBottom: "1rem",
 });
 
 const IconWrapper = styled(Box)(({ theme }) => ({
-   marginRight: "16px",
-   marginTop: "8px",
+   marginRight: "1rem",
+   marginTop: "0.5rem",
    display: "flex",
    border: "1px solid #fff",
-   boxShadow: "2px 4px 8px rgba(0, 0, 0, 0.1)",
+   boxShadow: "0.125rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1)",
    borderRadius: "20%",
    flexDirection: "column",
    alignItems: "center",
    justifyContent: "center",
-   width: "48px",
-   minWidth: "48px",
-   height: "48px",
+   width: "3rem",
+   minWidth: "3rem",
+   height: "3rem",
 }));
 
 const Section = () => {

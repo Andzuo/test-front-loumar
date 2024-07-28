@@ -5,28 +5,28 @@ import React from "react";
 
 const SectionContainer = styled(Box)(({ theme }) => ({
    display: "flex",
-   flexDirection: "collumn",
+   flexDirection: "column",
    alignItems: "center",
    justifyContent: "center",
    textAlign: "center",
-   padding: "40px 352px",
+   padding: "2.5rem 22rem",
    width: "95%",
    margin: "0 auto",
    [theme.breakpoints.down("xl")]: {
       flexDirection: "column",
-      padding: "16px",
+      padding: "1rem",
    },
 }));
 
 const BoxContent = styled(Box)(({ theme }) => ({
    display: "flex",
    width: "100%",
-   padding: "30px",
+   padding: "1.875rem",
    flexDirection: "column",
    alignItems: "center",
    justifyContent: "center",
    border: "1px solid #E0E0E0",
-   borderRadius: "16px",
+   borderRadius: "1rem",
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -42,7 +42,7 @@ const ActionPage = () => {
                Ainda tem dúvidas sobre Pizza?
             </Typography>
             <Typography
-               sx={{ margin: "16px 0" }}
+               sx={{ margin: "1rem 0" }}
                variant="body2"
                color="textSecondary"
             >

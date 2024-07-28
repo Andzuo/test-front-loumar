@@ -10,14 +10,18 @@ const FormContainer = styled(Box)(({ theme }) => ({
    width: "50%",
    margin: "0 auto",
    boxSizing: "border-box",
-   marginBottom: "115px",
+   marginBottom: "7.1875rem",
+   [theme.breakpoints.down("lg")]: {
+      width: "100%",
+   },
    [theme.breakpoints.down("sm")]: {
-      padding: "8px",
+      padding: "0.5rem",
+      width: "100%",
    },
 }));
 
 const FormFieldContainer = styled(Box)(({ theme }) => ({
-   marginBottom: "24px",
+   marginBottom: "1.5rem",
    width: "70%",
    display: "flex",
    flexDirection: "column",
@@ -25,13 +29,13 @@ const FormFieldContainer = styled(Box)(({ theme }) => ({
       height: "auto",
    },
    [theme.breakpoints.down("sm")]: {
-      marginBottom: "8px",
+      marginBottom: "0.5rem",
    },
 }));
 
 const CustomLabel = styled(Typography)(({ theme }) => ({
    fontWeight: "semibold",
-   marginBottom: "8px",
+   marginBottom: "0.5rem",
    color: "#344054",
 }));
 
@@ -40,14 +44,14 @@ const FormButtonContainer = styled(Box)(({ theme }) => ({
    display: "flex",
    justifyContent: "center",
    alignItems: "center",
-   marginTop: "16px",
+   marginTop: "1rem",
    textTransform: "none",
    outline: "none",
    "& button": {
       width: "100%",
       color: "#fff",
-      padding: "16px 20px",
-      borderRadius: "8px",
+      padding: "1rem 1.25rem",
+      borderRadius: "0.5rem",
    },
 }));
 
@@ -59,7 +63,7 @@ const TextContainer = styled(Box)(({ theme }) => ({
       paddingLeft: 0,
       display: "flex",
       flexDirection: "column",
-      marginTop: "20px",
+      marginTop: "1.25rem",
       textAlign: "center",
       alignItems: "center",
       justifyContent: "center",
@@ -142,7 +146,7 @@ const Form = () => {
                sx={{
                   textTransform: "none",
                   fontWeight: "bold",
-                  fontSize: "16px",
+                  fontSize: "1rem",
                }}
             >
                Enviar mensagem

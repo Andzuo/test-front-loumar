@@ -22,7 +22,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
 
 const TextContainer = styled(Box)(({ theme }) => ({
    display: "flex",
-   width: "15%",
+   width: "100%",
    flexDirection: "column",
    alignItems: "center",
    justifyContent: "center",
