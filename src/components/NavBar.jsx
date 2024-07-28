@@ -130,9 +130,30 @@ const NavBar = () => {
                onClose={handleMenuClose}
                sx={{ display: { xs: "block", md: "none" } }}
             >
-               <MenuItem onClick={handleMenuClose}>BLOCO 1</MenuItem>
-               <MenuItem onClick={handleMenuClose}>FAQ</MenuItem>
-               <MenuItem onClick={handleMenuClose}>CONTATO</MenuItem>
+               <MenuItem onClick={handleMenuClose}>
+                  <a
+                     href="#bloco1"
+                     style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                     BLOCO 1
+                  </a>
+               </MenuItem>
+               <MenuItem onClick={handleMenuClose}>
+                  <a
+                     href="#faq"
+                     style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                     FAQ
+                  </a>
+               </MenuItem>
+               <MenuItem onClick={handleMenuClose}>
+                  <a
+                     href="#form"
+                     style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                     CONTATO
+                  </a>
+               </MenuItem>
                <MenuItem onClick={handleMenuClose}>
                   <StyledLink
                      href="https://wa.me/5545988041417?text=Oi%20mensagem%0A"
