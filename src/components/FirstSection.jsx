@@ -42,7 +42,7 @@ const ImageContainer = styled("div")(({ theme }) => ({
 const TextContainer = styled(Box)(({ theme }) => ({
    marginLeft: "2rem",
    flex: 1,
-   [theme.breakpoints.down("sm")]: {
+   [theme.breakpoints.down("md")]: {
       marginLeft: 0,
       display: "flex",
       flexDirection: "column",
